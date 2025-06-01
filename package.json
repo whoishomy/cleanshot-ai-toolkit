@@ -1,0 +1,40 @@
+{
+  "name": "cleanshot-ai-toolkit",
+  "version": "1.0.0",
+  "description": "AI-powered screenshot management toolkit for CleanShot X with Notion integration",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node --esm ai-tag-cleanshots.ts",
+    "tag": "ts-node --esm ai-tag-cleanshots.ts",
+    "export": "ts-node --esm notion-export-cleanshots.ts",
+    "process": "./process-screenshot.sh",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "cleanshot",
+    "screenshot",
+    "ai",
+    "notion",
+    "automation",
+    "toolkit"
+  ],
+  "author": "Furkan Tutak",
+  "license": "MIT",
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "dotenv": "^16.5.0",
+    "glob": "^11.0.2",
+    "openai": "^4.28.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.50",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0",
+    "vitest": "^3.1.4"
+  }
+}
